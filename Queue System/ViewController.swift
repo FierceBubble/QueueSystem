@@ -9,6 +9,7 @@ import UIKit
 import FirebaseFirestore
 
 class ViewController: UIViewController {
+    
     @IBOutlet weak var registar_queueBtn: UIButton!
     @IBOutlet weak var finance_queueBtn: UIButton!
     @IBOutlet weak var vpu_queueBtn: UIButton!
@@ -18,14 +19,16 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var queue_label: UILabel!
     @IBOutlet weak var queue_number: UILabel!
+    @IBOutlet weak var queue_time: UILabel!
+    @IBOutlet weak var queue_department: UILabel!
     
     @IBOutlet weak var queue_registar: UILabel!
     @IBOutlet weak var queue_finance: UILabel!
     @IBOutlet weak var queue_vpu: UILabel!
     
     let database = Firestore.firestore()
-    let name = "Daniel Ryan Sunjaya"
-    let id = "1001851873"
+    var name : String = ""
+    var id : String = ""
     var uID: String?
 
     override func viewDidLoad() {
@@ -49,9 +52,12 @@ class ViewController: UIViewController {
             guard let name = data["name"] as? String else{
                 return
             }
-            guard let id = data["id"] as? String else{
+            guard let id = data["studentID"] as? String else{
                 return
             }
+            
+            self.name = name
+            self.id = id
             
             self.user_name.text = name
             self.user_id.text = id
@@ -60,42 +66,64 @@ class ViewController: UIViewController {
     
     func checkpersonalQueue(uID:String){
         
-//        database.collection("Queue_List/VPU_Queue/Student_List").whereField("id", isEqualTo: id).getDocuments { snapshot, err in
-//            if err == nil{
-//
-//                if let snapshot = snapshot {
-//                    var userInfo = snapshot.documents.map { doc in
-//
-//                        user(docID: doc.documentID,
-//                                    id: doc["id"] as? String ?? "",
-//                                    name: doc["name"] as? String ?? "",
-//                                    queueNumber: doc["queueNumber"] as? Int ?? 0,
-//                                    timeQueue: doc["timeQueue"] as? String ?? "")
-//
-//
-//                        return
-//                    }
-//
-//
-//                }
-//
-//            }else{
-//                // Document not found
-//
-//            }
-//        }
-        
-        if(queue_number.text == "0"){
-            queue_number.isHidden = true
-            queue_label.text = "You are not in any Queue!"
-        }else{
-            queue_number.isHidden = false
-            queue_label.text = "Your Queue"
+        let docRefQueue = database.document("Users/\(uID)")
+        docRefQueue.getDocument { [self] snapShot, err in
+            guard let data = snapShot?.data(), err == nil else{
+                return
+            }
+            
+            guard let queueAt = data["queueAt"] as? String else{
+                queue_number.isHidden = true
+                queue_department.isHidden = true
+                queue_time.isHidden = true
+                queue_label.text = "You are not in any Queue!"
+                
+                return
+            }
+            
+            if(queueAt != ""){
+                let docRefDept = self.database.document("Queue_List/\(queueAt)/Student_List/\(uID)")
+                docRefDept.getDocument { snapShot, err in
+                    guard let data = snapShot?.data(), err == nil else{
+                        return
+                    }
+                    
+                    guard let queueNumber = data["queueNumber"] as? Int else{
+                        return
+                    }
+                    
+                    guard let queueTime = data["timeQueue"] as? String else{
+                        return
+                    }
+                    
+                    
+                    queue_number.text = String(queueNumber)
+                    queue_number.isHidden = false
+                    queue_department.text = String(queueAt)
+                    queue_department.isHidden = false
+                    queue_time.text = String(queueTime)
+                    queue_time.isHidden = false
+                    queue_label.text = "Your Queue"
+                    
+                    registar_queueBtn.isHidden = true
+                    vpu_queueBtn.isHidden = true
+                    finance_queueBtn.isHidden = true
+                    
+                    
+                }
+            }else{
+                queue_number.isHidden = true
+                queue_department.isHidden = true
+                queue_time.isHidden = true
+                queue_label.text = "You are not in any Queue!"
+            }
+            
         }
+        
     }
     
     func writeQueueList(){
-        let docRef_vpu = database.document("Queue_List/VPU_Queue")
+        let docRef_vpu = database.document("Queue_List/VPU")
         docRef_vpu.getDocument{ [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else{
                 return
@@ -113,7 +141,7 @@ class ViewController: UIViewController {
             
         }
         
-        let docRef_finance = database.document("Queue_List/Finance_Queue")
+        let docRef_finance = database.document("Queue_List/Finance")
         docRef_finance.getDocument{ [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else{
                 return
@@ -131,7 +159,7 @@ class ViewController: UIViewController {
             
         }
         
-        let docRef_registar = database.document("Queue_List/Registar_Queue")
+        let docRef_registar = database.document("Queue_List/Registar")
         docRef_registar.getDocument{ [weak self] snapshot, error in
             guard let data = snapshot?.data(), error == nil else{
                 return
@@ -151,7 +179,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func queue_VPU(){
-        addQueue(queueDept: "VPU_Queue")
+        addQueue(queueDept: "VPU")
         vpu_queueBtn.isHidden = true
         registar_queueBtn.isHidden = true
         finance_queueBtn.isHidden = true
@@ -159,7 +187,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func queue_Finance(){
-        addQueue(queueDept: "Finance_Queue")
+        addQueue(queueDept: "Finance")
         vpu_queueBtn.isHidden = true
         registar_queueBtn.isHidden = true
         finance_queueBtn.isHidden = true
@@ -167,7 +195,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func queue_Registar(){
-        addQueue(queueDept: "Registar_Queue")
+        addQueue(queueDept: "Registar")
         vpu_queueBtn.isHidden = true
         registar_queueBtn.isHidden = true
         finance_queueBtn.isHidden = true
@@ -191,20 +219,26 @@ class ViewController: UIViewController {
             }
             
             
-            let docRef = self.database.document("Queue_List/\(queueDept)/Student_List/\(String(Queue+1))")
+            let docRef = self.database.document("Queue_List/\(queueDept)/Student_List/\(uID!)")
             docRef.setData(["name" : name,
                             "id" : id,
                             "queueNumber" : (Queue+1),
                             "timeQueue" : dateformatter.string(from: Date())])
             
-            docRefAll.setData(["totalQueue" : Queue+1])
+            let docRefPersonal = self.database.document("Users/\(uID!)")
+            docRefPersonal.updateData(["queueAt" : queueDept])
+            
+            docRefAll.updateData(["totalQueue" : Queue+1])
+            
+            queue_number.text = String(Queue+1)
+            queue_number.isHidden = false
+            queue_department.text = String(queueDept)
+            queue_department.isHidden = false
+            queue_time.text = String(dateformatter.string(from: Date()))
+            queue_time.isHidden = false
+            queue_label.text = "Your Queue"
             
         }
-        
-        checkpersonalQueue(uID: uID!)
-        
-        
-        
         
     }
     

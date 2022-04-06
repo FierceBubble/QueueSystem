@@ -10,17 +10,12 @@ import FirebaseAuth
 import Firebase
 
 class SignUpViewController: UIViewController {
-
+    // Declare Objects
     @IBOutlet weak var fNameTextField: UITextField!
-    
     @IBOutlet weak var studentIDTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-    
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var signUpButton: UIButton!
-    
     @IBOutlet weak var errorLabel: UILabel!
     
     override func viewDidLoad() {
@@ -119,7 +114,12 @@ class SignUpViewController: UIViewController {
                     // User was created successfully, now store the full name and studentID
                     let db = Firestore.firestore()
                     
-                    db.collection("Users").document(String(result!.user.uid)).setData(["name":fullName, "studentID":studentID,"email":email,"password":password, "role":role ]) { (error) in
+                    db.collection("Users").document(String(result!.user.uid)).setData(["name":fullName,
+                         "studentID":studentID,
+                         "email":email,
+                         "password":password,
+                         "role":role,
+                         "queueAt": ""]) { (error) in
                         
                         if error != nil {
                             // Show error message
@@ -127,8 +127,7 @@ class SignUpViewController: UIViewController {
                         }
                     }
                     
-                    // Transition to the home screen
-                    self.movingToHome()
+                   
                 }
                 
             }
@@ -144,13 +143,6 @@ class SignUpViewController: UIViewController {
         errorLabel.alpha = 1
     }
     
-    func movingToHome() {
-        
-        let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? ViewController
-        
-        view.window?.rootViewController = homeViewController
-        view.window?.makeKeyAndVisible()
-        
-    }
+    
     
 }

@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qif-Rc-aHn">
-                                <rect key="frame" x="176.5" y="414" width="61" height="120"/>
+                                <rect key="frame" x="176.5" y="385" width="61" height="120"/>
                                 <accessibility key="accessibilityConfiguration" identifier="user_queueNumber"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <nil key="textColor"/>
@@ -83,7 +83,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Queue" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gvm-nt-FRR">
-                                <rect key="frame" x="40" y="363" width="334" height="42"/>
+                                <rect key="frame" x="40" y="334" width="334" height="42"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -136,6 +136,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finance Department" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49Z-Qi-OXt">
+                                <rect key="frame" x="40" y="513" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Queue: 14 Jun 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWC-0G-KNT">
+                                <rect key="frame" x="40" y="542" width="334" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,17 +162,21 @@
                             <constraint firstItem="Sm6-qa-BvO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="277" id="C4s-O1-hVk"/>
                             <constraint firstItem="h4b-hl-GxM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="108.5" id="DYa-VZ-OC7"/>
                             <constraint firstItem="y2r-dP-SjW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-109.5" id="Fjg-Bk-4F3"/>
+                            <constraint firstItem="hWC-0G-KNT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="ITq-ky-Jig"/>
                             <constraint firstItem="0DC-W6-iDD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-109.5" id="K83-26-gHJ"/>
                             <constraint firstItem="h4b-hl-GxM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="216.5" id="Lwq-nv-TQG"/>
                             <constraint firstItem="tce-GH-h5i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="M55-o4-pZc"/>
                             <constraint firstItem="tce-GH-h5i" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="65" id="Mrh-B2-l01"/>
+                            <constraint firstItem="49Z-Qi-OXt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OuV-L1-NFx"/>
                             <constraint firstItem="voK-ca-SIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="108.5" id="Rog-My-eue"/>
                             <constraint firstItem="ElL-Oz-nXj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TSx-2t-pnU"/>
-                            <constraint firstItem="Gvm-nt-FRR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-64" id="Voo-ki-pjS"/>
+                            <constraint firstItem="Gvm-nt-FRR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-93" id="Voo-ki-pjS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tce-GH-h5i" secondAttribute="trailing" constant="40" id="WE3-Gd-lJY"/>
                             <constraint firstItem="0DC-W6-iDD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="333.5" id="Wuf-m2-oXi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="49Z-Qi-OXt" secondAttribute="trailing" constant="40" id="YA2-UY-vTG"/>
                             <constraint firstItem="ElL-Oz-nXj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-189.5" id="YGd-y0-hG2"/>
                             <constraint firstItem="voK-ca-SIZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="277" id="ZWM-Hw-cu4"/>
+                            <constraint firstItem="hWC-0G-KNT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZsW-ZB-pe9"/>
                             <constraint firstItem="qif-Rc-aHn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cdF-Ep-MLz"/>
                             <constraint firstItem="Gvm-nt-FRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="cl0-5Y-Sqc"/>
                             <constraint firstItem="bwf-bg-7FU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="108.5" id="d9y-zE-J7b"/>
@@ -168,21 +184,27 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Gvm-nt-FRR" secondAttribute="trailing" constant="40" id="gC6-iw-2tk"/>
                             <constraint firstItem="PJf-gC-9qJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jgJ-V6-2Ag"/>
                             <constraint firstItem="RFH-Ik-8DR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-110" id="k1P-RT-A1P"/>
+                            <constraint firstItem="49Z-Qi-OXt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="75.5" id="kLR-cK-k7a"/>
+                            <constraint firstItem="hWC-0G-KNT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="104.5" id="kbg-70-FyZ"/>
                             <constraint firstItem="E3X-Hd-xga" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oWI-1j-f9p"/>
-                            <constraint firstItem="qif-Rc-aHn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="26" id="p0n-aW-Nq4"/>
+                            <constraint firstItem="qif-Rc-aHn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-3" id="p0n-aW-Nq4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hWC-0G-KNT" secondAttribute="trailing" constant="40" id="qkB-f5-cOA"/>
                             <constraint firstItem="PJf-gC-9qJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="333" id="qtR-A5-hHi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="98R-4W-aPJ" secondAttribute="trailing" constant="174" id="tem-0g-bFY"/>
                             <constraint firstItem="E3X-Hd-xga" firstAttribute="top" secondItem="1i5-XV-Az2" secondAttribute="bottom" constant="13" id="uh3-6B-Fz5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ElL-Oz-nXj" secondAttribute="trailing" constant="174" id="uy2-Mz-2GK"/>
                             <constraint firstItem="RFH-Ik-8DR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="216.5" id="y8c-Eh-3dt"/>
+                            <constraint firstItem="49Z-Qi-OXt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zTw-2V-I0b"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="finance_queueBtn" destination="PJf-gC-9qJ" id="Onf-IX-CjU"/>
+                        <outlet property="queue_department" destination="49Z-Qi-OXt" id="EeV-8c-qJs"/>
                         <outlet property="queue_finance" destination="Sm6-qa-BvO" id="RF1-Kh-dfM"/>
                         <outlet property="queue_label" destination="Gvm-nt-FRR" id="seQ-1x-Wb0"/>
                         <outlet property="queue_number" destination="qif-Rc-aHn" id="FuW-hn-n7r"/>
                         <outlet property="queue_registar" destination="voK-ca-SIZ" id="v9q-cn-zcy"/>
+                        <outlet property="queue_time" destination="hWC-0G-KNT" id="Ydk-hA-PSb"/>
                         <outlet property="queue_vpu" destination="y2r-dP-SjW" id="NSq-Es-cEM"/>
                         <outlet property="registar_queueBtn" destination="bwf-bg-7FU" id="bhx-ym-Qdj"/>
                         <outlet property="user_id" destination="98R-4W-aPJ" id="mJM-fr-o0k"/>
@@ -192,7 +214,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-752" y="-263"/>
+            <point key="canvasLocation" x="-752.17391304347836" y="-263.16964285714283"/>
         </scene>
         <!--Sign Up View Controller-->
         <scene sceneID="zNi-jX-Nux">
@@ -238,6 +260,7 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
                                         <connections>
                                             <action selector="signUpClicked:" destination="704-qb-e56" eventType="touchUpInside" id="5Ve-p1-dED"/>
+                                            <segue destination="C8t-Nc-ek0" kind="show" id="jI0-Hg-FdQ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GAJ-nV-oG3">
@@ -433,6 +456,9 @@
             <point key="canvasLocation" x="-834" y="498"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="rvH-BT-usY"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="UCSI_Logo.png" width="370" height="455"/>
         <systemColor name="systemBackgroundColor">

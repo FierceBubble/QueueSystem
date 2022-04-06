@@ -96,8 +96,6 @@ class LoginViewController: UIViewController {
                         homeViewController.modalPresentationStyle = .fullScreen
                         present(homeViewController, animated: true, completion: nil)
 
-//                        self.view.window?.rootViewController = homeViewController
-//                        self.view.window?.makeKeyAndVisible()
                         
                     }else{
                         // Go to Admin Page
