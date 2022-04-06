@@ -26,18 +26,39 @@ class ViewController: UIViewController {
     let database = Firestore.firestore()
     let name = "Daniel Ryan Sunjaya"
     let id = "1001851873"
+    var uID: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        user_name.text = name
-        user_id.text = id
         
-        checkpersonalQueue()
+        
+        writePersonalInfo(uID: uID!)
+        
+        checkpersonalQueue(uID: uID!)
         
         writeQueueList()
     }
     
-    func checkpersonalQueue(){
+    func writePersonalInfo(uID:String){
+        let docRef = database.document("Users/\(uID)")
+        docRef.getDocument { [self] snapShot, err in
+            guard let data = snapShot?.data(), err == nil else{
+                return
+            }
+            
+            guard let name = data["name"] as? String else{
+                return
+            }
+            guard let id = data["id"] as? String else{
+                return
+            }
+            
+            self.user_name.text = name
+            self.user_id.text = id
+        }
+    }
+    
+    func checkpersonalQueue(uID:String){
         
 //        database.collection("Queue_List/VPU_Queue/Student_List").whereField("id", isEqualTo: id).getDocuments { snapshot, err in
 //            if err == nil{
@@ -180,7 +201,7 @@ class ViewController: UIViewController {
             
         }
         
-        checkpersonalQueue()
+        checkpersonalQueue(uID: uID!)
         
         
         

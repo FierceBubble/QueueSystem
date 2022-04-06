@@ -15,5 +15,11 @@ struct Constants {
         
     }
     
+    struct HostStoryboard{
+        
+        static let hostViewController = "HostView"
+        
+    }
+    
     
 }

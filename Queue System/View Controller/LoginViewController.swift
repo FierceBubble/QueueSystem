@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class LoginViewController: UIViewController {
 
@@ -19,7 +20,10 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
+    let database = Firestore.firestore()
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
@@ -65,7 +69,7 @@ class LoginViewController: UIViewController {
         let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
         
         // Signing in the user
-        Auth.auth().signIn(withEmail: email, password: password) { (result, error) in
+        Auth.auth().signIn(withEmail: email, password: password) { [self] (result, error) in
             
             if error != nil {
                 // Couldn't sign in
@@ -73,11 +77,39 @@ class LoginViewController: UIViewController {
                 self.errorLabel.alpha = 1
             }
             else {
+                let userUID = String(result!.user.uid)
+                self.database.collection("Users").document(userUID).getDocument { DocumentSnapshot, Error in
+                    guard let data = DocumentSnapshot?.data(), Error == nil else{
+                        return
+                    }
+                    
+                    guard let role = data["role"] as? String else{
+                        return
+                    }
+                    print("Role: \(role)")
+                    
+                    if (role == "Student"){
+                        // Go to Student Page
+                        let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as! ViewController
+                        
+                        homeViewController.uID = userUID
+                        homeViewController.modalPresentationStyle = .fullScreen
+                        present(homeViewController, animated: true, completion: nil)
+
+//                        self.view.window?.rootViewController = homeViewController
+//                        self.view.window?.makeKeyAndVisible()
+                        
+                    }else{
+                        // Go to Admin Page
+                        let hostViewController = self.storyboard?.instantiateViewController(identifier: Constants.HostStoryboard.hostViewController) as? HostViewController
+
+                        self.view.window?.rootViewController = hostViewController
+                        self.view.window?.makeKeyAndVisible()
+                        
+                    }
+                }
                 
-                let homeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? ViewController
                 
-                self.view.window?.rootViewController = homeViewController
-                self.view.window?.makeKeyAndVisible()
             }
         }
     }

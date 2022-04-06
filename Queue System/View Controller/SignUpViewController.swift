@@ -103,6 +103,7 @@ class SignUpViewController: UIViewController {
             let studentID = studentIDTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let role = "Student"
             
             // Create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
@@ -118,7 +119,7 @@ class SignUpViewController: UIViewController {
                     // User was created successfully, now store the full name and studentID
                     let db = Firestore.firestore()
                     
-                    db.collection("Students").addDocument(data: ["Name":fullName, "StudentID":studentID,"Email":email,"Password":password, "uid": result!.user.uid ]) { (error) in
+                    db.collection("Users").document(String(result!.user.uid)).setData(["name":fullName, "studentID":studentID,"email":email,"password":password, "role":role ]) { (error) in
                         
                         if error != nil {
                             // Show error message

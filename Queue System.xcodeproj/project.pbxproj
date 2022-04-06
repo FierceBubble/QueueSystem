@@ -16,6 +16,7 @@
 		5B90D86427FDA781008B72BB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90D86227FDA781008B72BB /* Constants.swift */; };
 		5B90D86527FDA781008B72BB /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90D86327FDA781008B72BB /* Styling.swift */; };
 		5B90D86727FDA84D008B72BB /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90D86627FDA84D008B72BB /* StartViewController.swift */; };
+		5B90D86927FDEF7D008B72BB /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90D86827FDEF7D008B72BB /* HostViewController.swift */; };
 		5B9AD87527FD051D00CAC0A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9AD87427FD051D00CAC0A5 /* AppDelegate.swift */; };
 		5B9AD87727FD051D00CAC0A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9AD87627FD051D00CAC0A5 /* SceneDelegate.swift */; };
 		5B9AD87927FD051D00CAC0A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9AD87827FD051D00CAC0A5 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 		5B90D86227FDA781008B72BB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		5B90D86327FDA781008B72BB /* Styling.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
 		5B90D86627FDA84D008B72BB /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		5B90D86827FDEF7D008B72BB /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		5B9AD87127FD051D00CAC0A5 /* Queue System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Queue System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B9AD87427FD051D00CAC0A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B9AD87627FD051D00CAC0A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				5B90D85C27FDA768008B72BB /* LoginViewController.swift */,
 				5B90D85D27FDA769008B72BB /* SignUpViewController.swift */,
 				5B90D86627FDA84D008B72BB /* StartViewController.swift */,
+				5B90D86827FDEF7D008B72BB /* HostViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				5B90D85927FD8C74008B72BB /* user.swift in Sources */,
 				5B9AD87927FD051D00CAC0A5 /* ViewController.swift in Sources */,
 				5B90D86727FDA84D008B72BB /* StartViewController.swift in Sources */,
+				5B90D86927FDEF7D008B72BB /* HostViewController.swift in Sources */,
 				5B9AD87527FD051D00CAC0A5 /* AppDelegate.swift in Sources */,
 				5B9AD87727FD051D00CAC0A5 /* SceneDelegate.swift in Sources */,
 				5B90D86427FDA781008B72BB /* Constants.swift in Sources */,
