@@ -335,74 +335,74 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Project Assignment" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lya-49-LIe">
-                                <rect key="frame" x="107.5" y="357.5" width="199.5" height="20.5"/>
+                                <rect key="frame" x="107.5" y="393.5" width="199.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jiR-Lf-LPk">
-                                <rect key="frame" x="176" y="386.5" width="62.5" height="20.5"/>
+                                <rect key="frame" x="176" y="415.5" width="62.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group members:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQ1-Ma-bDc">
-                                <rect key="frame" x="143" y="435.5" width="128" height="20.5"/>
+                                <rect key="frame" x="143" y="459.5" width="128" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Ryan Sunjaya - 1001851873" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJD-DP-dQ0">
-                                <rect key="frame" x="76" y="499.5" width="262.5" height="20.5"/>
+                                <rect key="frame" x="76" y="486.5" width="262.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steven Wong - 1001851873" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWu-YC-xEo">
-                                <rect key="frame" x="102" y="528.5" width="210.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Steven Wong - 1001748707" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWu-YC-xEo">
+                                <rect key="frame" x="102" y="515.5" width="210.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Law Yenchin- 1001851873" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBR-wm-TTb">
-                                <rect key="frame" x="107" y="556.5" width="200" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Law Yenchin- 1001850247" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBR-wm-TTb">
+                                <rect key="frame" x="106" y="543.5" width="202.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lee Huiyung - 1001851873" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8l-gS-3Y9">
-                                <rect key="frame" x="105" y="584.5" width="204.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lee Huiyung - 100185242" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8l-gS-3Y9">
+                                <rect key="frame" x="108.5" y="571.5" width="197.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UCSI_Logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="u5w-ms-zwz">
-                                <rect key="frame" x="107" y="-15" width="200" height="455"/>
+                                <rect key="frame" x="107" y="-12" width="200" height="455"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CS7-xj-z7f"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="IWu-YC-xEo" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="90.75" id="2cP-Eo-N4W"/>
+                            <constraint firstItem="IWu-YC-xEo" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="77.75" id="2cP-Eo-N4W"/>
                             <constraint firstItem="R8l-gS-3Y9" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="6YF-en-ehX"/>
                             <constraint firstItem="u5w-ms-zwz" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="9Mf-Hd-pAw"/>
                             <constraint firstItem="IWu-YC-xEo" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="Dmh-6H-MwP"/>
                             <constraint firstItem="CS7-xj-z7f" firstAttribute="trailing" secondItem="7jr-DA-Svg" secondAttribute="trailing" constant="40" id="FIx-z0-0Hk"/>
-                            <constraint firstItem="gJD-DP-dQ0" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="61.75" id="IAN-Ba-isv"/>
+                            <constraint firstItem="gJD-DP-dQ0" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="48.75" id="IAN-Ba-isv"/>
                             <constraint firstItem="u5w-ms-zwz" firstAttribute="leading" secondItem="CS7-xj-z7f" secondAttribute="leading" constant="107" id="Jgj-Ct-vef"/>
-                            <constraint firstItem="u5w-ms-zwz" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-235.5" id="Mme-Pr-sCq"/>
+                            <constraint firstItem="u5w-ms-zwz" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-232.5" id="Mme-Pr-sCq"/>
                             <constraint firstItem="jQ1-Ma-bDc" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="OeE-Nb-sLn"/>
                             <constraint firstItem="jiR-Lf-LPk" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="SOJ-uW-D5S"/>
                             <constraint firstItem="Lya-49-LIe" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="WoE-8z-qoO"/>
                             <constraint firstItem="gJD-DP-dQ0" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="Wtc-yW-JyL"/>
-                            <constraint firstItem="jiR-Lf-LPk" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-51.25" id="ajV-de-b6n"/>
+                            <constraint firstItem="jiR-Lf-LPk" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-22.25" id="ajV-de-b6n"/>
                             <constraint firstItem="CS7-xj-z7f" firstAttribute="bottom" secondItem="7jr-DA-Svg" secondAttribute="bottom" constant="40" id="cp4-qp-ahq"/>
                             <constraint firstItem="NBR-wm-TTb" firstAttribute="centerX" secondItem="hgi-Ke-wzn" secondAttribute="centerX" id="d0d-kq-FxF"/>
-                            <constraint firstItem="jQ1-Ma-bDc" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-2.25" id="dRp-mA-uqc"/>
+                            <constraint firstItem="jQ1-Ma-bDc" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="21.75" id="dRp-mA-uqc"/>
                             <constraint firstItem="7jr-DA-Svg" firstAttribute="leading" secondItem="CS7-xj-z7f" secondAttribute="leading" constant="40" id="kUw-EK-RaP"/>
-                            <constraint firstItem="NBR-wm-TTb" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="118.75" id="mQt-jd-xhl"/>
-                            <constraint firstItem="R8l-gS-3Y9" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="146.75" id="nSd-9c-3xM"/>
-                            <constraint firstItem="Lya-49-LIe" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-80.25" id="vUL-EK-05e"/>
+                            <constraint firstItem="NBR-wm-TTb" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="105.75" id="mQt-jd-xhl"/>
+                            <constraint firstItem="R8l-gS-3Y9" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="133.75" id="nSd-9c-3xM"/>
+                            <constraint firstItem="Lya-49-LIe" firstAttribute="centerY" secondItem="hgi-Ke-wzn" secondAttribute="centerY" constant="-44.25" id="vUL-EK-05e"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yre-Zs-DIe"/>
